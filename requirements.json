@@ -1,0 +1,54 @@
+{
+  "workflow_id": "dbe40d5e-f6c0-4e1a-a627-81f53a561280",
+  "created_at": "2026-01-20T06:44:25.826019",
+  "completed_at": "2026-01-20T06:51:29.494205",
+  "approved_at": "2026-01-20T06:44:44.226762",
+  "approved_by": "aa84fc24-1177-4c6b-bed1-5d23e6bc762a",
+  "prompt": "Create a data pipeline that reads CSV files from an S3 bucket, validates the data schema, performs data quality checks, transforms it using pandas, and loads it into a PostgreSQL database. Include error handling, logging, retry logic, and a configuration file for managing connection settings. Generate comprehensive unit tests and documentation.",
+  "prompt_type": "data_pipeline",
+  "specification": {
+    "prompt": "Create a data pipeline that reads CSV files from an S3 bucket, validates the data schema, performs data quality checks, transforms it using pandas, and loads it into a PostgreSQL database. Include error handling, logging, retry logic, and a configuration file for managing connection settings. Generate comprehensive unit tests and documentation.",
+    "metadata": {
+      "data_sources": [
+        "AWS S3"
+      ],
+      "pipeline_type": "Batch ETL",
+      "data_destinations": [
+        "PostgreSQL"
+      ],
+      "processing_patterns": [
+        "data cleansing",
+        "validation",
+        "transformation"
+      ]
+    },
+    "model_id": "anthropic.claude-3-5-sonnet-20240620-v1:0",
+    "framework": null,
+    "languages": [
+      "Python"
+    ],
+    "prompt_type": "data_pipeline",
+    "temperature": 0.1,
+    "data_sources": null,
+    "pipeline_type": null,
+    "template_mode": "scaffold",
+    "data_destinations": null,
+    "testing_requirements": [
+      "comprehensive unit tests"
+    ],
+    "security_requirements": null,
+    "deployment_requirements": [
+      "configuration file"
+    ],
+    "monitoring_requirements": [
+      "logging"
+    ],
+    "performance_requirements": [
+      "data quality checks"
+    ],
+    "error_handling_requirements": [
+      "error handling",
+      "retry logic"
+    ]
+  }
+}
