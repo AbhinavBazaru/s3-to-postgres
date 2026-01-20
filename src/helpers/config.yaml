@@ -1,0 +1,33 @@
+s3_bucket: 'my-data-bucket'
+input_files:
+  - 'data1.csv'
+  - 'data2.csv'
+  - 'data3.csv'
+
+expected_schema:
+  - 'id'
+  - 'name'
+  - 'date'
+  - 'value'
+
+data_quality_rules:
+  - column: 'id'
+    check: 'not_null'
+  - column: 'id'
+    check: 'unique'
+  - column: 'name'
+    check: 'not_null'
+
+transformations:
+  - type: 'rename'
+    mapping:
+      'id': 'user_id'
+  - type: 'drop'
+    columns: ['unused_column']
+  - type: 'date_format'
+    column: 'date'
+    format: '%Y-%m-%d'
+
+postgres_table: 'processed_data'
+postgres_conn_id: 'my_postgres_conn'
+postgres_password_secret_name: 'my_postgres_password'
